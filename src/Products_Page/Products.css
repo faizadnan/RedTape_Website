@@ -1,0 +1,14 @@
+.imgbox>button{
+    background-color: lightpink;
+    border: 1px solid palevioletred;
+    border-radius: 6px;
+    padding: 0 5px;
+}
+
+.imgbox>button:hover{
+    background-color: rgb(185, 60, 60);
+}
+
+h4{
+    font-size: 20px;
+}
