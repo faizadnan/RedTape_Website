@@ -1,9 +1,11 @@
 .okay{
-    background: rgb(176,36,215);
-    background: linear-gradient(25deg, rgba(176,36,215,1) 0%, rgba(154,223,223,1) 100%);
-    width: 200px;
-    height: 200px;
-    position: absolute    ;
+    /* background: rgb(176,36,215); */
+    /* background: linear-gradient(25deg, rgba(176,36,215,1) 0%, rgba(154,223,223,1) 100%); */
+    background-color: rgb(10, 10, 34);
+    opacity: 1;
+    /* width: 200px; */
+    /* height: 200px; */
+    position: fixed    ;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -11,11 +13,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     
 }
 
 .cart_container{
-    background-color: #c182c7;
+    background-color: pink;
     border-radius: 10px;
     width: 800px;
     height: 500px;

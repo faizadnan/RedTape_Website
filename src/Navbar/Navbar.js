@@ -4,6 +4,7 @@ import logo from '../images/logo.png'
 // import image1 from '../images/image1.png'
 import { Link } from 'react-router-dom'
 import Cart from '../Cart/Cart'
+import  ReactDOM  from 'react-dom';
 export default function Navbar(props) {
     // console.log(props.count)
     // console.log(props.cartitem)
@@ -45,7 +46,7 @@ export default function Navbar(props) {
 
             </div>
 
-            {openModal && <Cart closeCart={setopenModal} cartitem={props.cartitem}></Cart>}
+            {openModal && ReactDOM.createPortal(<Cart closeCart={setopenModal} cartitem={props.cartitem}></Cart>,document.getElementById("modal"))}
 
 
 
