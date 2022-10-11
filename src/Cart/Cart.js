@@ -4,16 +4,16 @@ import { useState, useEffect } from 'react';
 // import  ReactDOM  from 'react-dom';
 export default function Cart(props) {
 
-    
+
 
     const [myitem, setmyitem] = useState(props.cartitem);
-   
-   
+
+
     let sum = 0;
     // const [numberOfItems, setnumberOfItems] = useState(true)
 
 
-    
+
 
 
     return (
@@ -31,7 +31,8 @@ export default function Cart(props) {
 
 
                     <div className='cart_items_outer'>
-                        {myitem.map(items => {
+
+                        {(myitem.length > 1) ? myitem.map(items => {
                             sum += parseInt(items.cost);
                             return <div className='cart_items' key={items.id}>
                                 <img src={items.src} alt="" />
@@ -57,24 +58,29 @@ export default function Cart(props) {
                                     </div>
                                     <div className="cart_items_row3">
                                         <div>
-                                            <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id) }}>Delete</span></div>
+                                            <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id) }}>Delete</span>
+                                            </div>
                                         <span>|</span>
-                                        <div>  <i class="fa fa-heart" aria-hidden="true"></i> <span>Save</span></div>
+                                        <div>  <i class="fa fa-heart" aria-hidden="true"></i> <span>Save</span>
+                                        </div>
 
+                                    </div>
+                                    <div className="cart_items_row4">
+                                           <button onClick={}>-</button> <input type="text" /> <button>+</button> 
                                     </div>
                                 </div>
                             </div>
-                        })}
+                        }) : <h2>No items to show</h2>}
                     </div>
 
-                    <div className='total_cost_div'>
+                    {(myitem.length > 0) && <div className='total_cost_div'>
                         <div className='total_cost_row1'>
                             <h3>Total Cost</h3>
                             <h3>
                                 ${sum}
                             </h3>
                         </div>
-                    </div>
+                    </div>}
 
                     <div className='cart_button'>
                         <button onClick={() => {

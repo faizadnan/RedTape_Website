@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+ 
     flex-direction: column;
 
     
@@ -21,19 +22,20 @@
     background-color: pink;
     border-radius: 10px;
     width: 800px;
-    height: 500px;
+    max-height: 500px;
     display: flex;
     justify-content: space-between  ;
     align-items: center;
     flex-direction: column;
+    gap: 10px;
     padding: 20px;   
     box-shadow: 2px 2px 9px 5px #74235b;
   
     box-sizing: border-box;
 }
 .cart_items_outer{
-    overflow: scroll;
-  
+ 
+    overflow: auto;
 }
 .heading{
     display: flex;
@@ -48,6 +50,7 @@ h6 i{
 }
 
 .cart_items{
+   
     width: 90%;
     display: flex;
     gap: 20px;
@@ -129,4 +132,36 @@ h6 i{
    
     padding: 0px 40px;
   
+}
+
+.cart_items_row4{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+   
+}
+.cart_items_row4>button{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: pink;
+  
+}
+.cart_items_row4>button:hover{
+    background-color:palevioletred;
+}
+
+.cart_items_row4>input{
+    max-width: 35px;
+    border: none;
+    padding: 2px;
+    background-color:palevioletred;
+    border-radius: 5px;
 }

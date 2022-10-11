@@ -1,6 +1,7 @@
 import React from 'react'
 import './Register.css'
 import image1 from '../images/image1.png'
+import './Register1.scss'
 
 export default function Register() {    
   return (
