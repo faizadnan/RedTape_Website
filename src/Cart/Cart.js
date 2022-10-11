@@ -1,12 +1,18 @@
 import React from 'react'
 import './Cart.css'
-import { useState, useEffect } from 'react';
+import { useState, useReducer } from 'react';
 // import  ReactDOM  from 'react-dom';
+const initialState = { count: 0 };
+function reducer(state, action) {
+    switch (action.type) {
+        case "INCREASE": return { count: state.count + 1 };
+        case "DECREASE": return { count: state.count + 1 }
+    }
+}
 export default function Cart(props) {
-
-
-
     const [myitem, setmyitem] = useState(props.cartitem);
+
+    const [state, dispatch] = useReducer(reducer, initialState)
 
 
     let sum = 0;
@@ -59,15 +65,30 @@ export default function Cart(props) {
                                     <div className="cart_items_row3">
                                         <div>
                                             <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id) }}>Delete</span>
-                                            </div>
+                                        </div>
                                         <span>|</span>
                                         <div>  <i class="fa fa-heart" aria-hidden="true"></i> <span>Save</span>
                                         </div>
 
                                     </div>
+
                                     <div className="cart_items_row4">
-                                           <button onClick={}>-</button> <input type="text" /> <button>+</button> 
+                                        <button >-</button> <input type="text" /> <button >+</button>
                                     </div>
+
+
+                                    {/* <div className="cart_items_row4">
+                                        <button onClick={() =>{
+                                            dispatch({
+                                                type: "DECREASE",
+                                                state
+                                            })}
+                                        }>-</button> <input type="text" value={state.count} /> <button >+</button>
+                                    </div> */}
+
+
+
+
                                 </div>
                             </div>
                         }) : <h2>No items to show</h2>}
