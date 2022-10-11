@@ -1,14 +1,15 @@
 import React from 'react'
 import './Register.css'
+import image1 from '../images/image1.png'
 
-export default function Register() {
+export default function Register() {    
   return (
     <>
           <div className="account_page_div">
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <img src="images/image1.png" width="100%"/>
+                        <img src={image1} width="100%"/>
                     </div>
 
                     <div className="col">

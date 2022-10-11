@@ -26,8 +26,16 @@ export default function App() {
 
   const addtoCart = (item) => {
     cartitem.push(item);
-    // console.log(cartitem);
+    console.log(cartitem);
     setcartitem([...cartitem]);
+  }
+
+  const removeitem=(id)=>{
+    console.log("clicked delte")
+    console.log(id)
+    const newList = cartitem.filter((item) => item.id !== id);
+    console.log(newList)
+    setcartitem(newList);
   }
   return (
 
@@ -36,7 +44,7 @@ export default function App() {
     <Context.Provider value={items}>
 
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Navbar count={count} cartitem={cartitem}></Navbar>
+        <Navbar count={count} cartitem={cartitem} removeitem={removeitem}></Navbar>
         <Routes>
           <Route path='/Login' element={<Login />}></Route>
           <Route path='/Register' element={<Register />}></Route>

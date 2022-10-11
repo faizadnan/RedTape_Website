@@ -33,6 +33,7 @@
     padding: 20px 0;
     text-align: center;
     position: relative;
+    top: 70px;
     /* margin: 20px auto; */
     box-shadow: 1rem 1rem 1rem 0.5rem gray;
     /* margin-bottom: 20px; */
@@ -84,6 +85,10 @@
     text-decoration: none;
     color: gray;
 }
+
+    
+  
+
 
 @media screen and (max-width: 600px) {
 
