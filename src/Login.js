@@ -1,5 +1,5 @@
 import React from 'react'
-import './Login.css'
+import classes from './Login.module.css'
 import { Link } from 'react-router-dom'
 import image from './images/image1.png'
 
@@ -9,13 +9,13 @@ export default function Login() {
 
 
             <div class="account_page_div">
-                <div class="container">
-                    <div class="row">
+                <div class={classes.container}>
+                    <div class={classes.row}>
                         <div class="col">
                             <img src={image} width="100%" alt='Here is a image' />
                         </div>
 
-                        <div class="col">
+                        <div class={classes.col}>
 
                             <div class="form_container">
                                 <div class="form_btn">

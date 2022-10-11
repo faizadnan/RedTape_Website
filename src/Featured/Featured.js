@@ -5,7 +5,7 @@ export default function Featured(props) {
     return (
         <div className="featureddiv">
             <div>
-                <h2>Featured Products</h2>
+                <h2 style={{marginTop: "20px"}}>Featured Products</h2>
             </div>
             <FeaturedItems items={props.items}></FeaturedItems>
         </div>

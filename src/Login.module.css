@@ -3,11 +3,18 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+}
+
+.container{
+    /* border: 1px solid red; */
 }
 
 .col {
-    flex-basis: 50%;
-    max-width: 300px;
+    flex-basis: 70%;
+    max-width: 500px;
 }
 
 .col img {
@@ -17,11 +24,13 @@
 }
 
 .account_page_div {
-    background: linear-gradient(to bottom, lightpink, white);
-    /* background: linear-gradient(to bottom,#ae8cea, #50dfb2); */
-    /* background-color: 50dfb2; */
-    height: 450px;
-
+   background: linear-gradient(to bottom, lightpink, white);
+   margin-top: 50px;
+    top: 58px;
+    /* left: 50px; */
+    width: 100%;
+    /* height: 450px;*/
+    /* border: 1px solid red; */
 
 }
 

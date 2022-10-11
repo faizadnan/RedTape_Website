@@ -37,7 +37,7 @@ export default function FeaturedItems(props) {
 
 
             <div>
-                <h2>Latest Products</h2>
+                <h2 style={{marginTop: "20px"}}> Latest Products</h2>
             </div>
 
             <div className="featureddiv">

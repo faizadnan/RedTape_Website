@@ -38,11 +38,11 @@ export default function Cart(props) {
 
                     <div className='cart_items_outer'>
 
-                        {(myitem.length > 1) ? myitem.map(items => {
+                        {(myitem.length > 0) ? myitem.map(items => {
                             sum += parseInt(items.cost);
                             return <div className='cart_items' key={items.id}>
                                 <img src={items.src} alt="" />
-                                <div>
+                                <div className='carts_info'>
                                     <div className='cart_items_title'>
                                         <h4>{items.title}</h4>
                                         <h5>${items.cost}</h5>

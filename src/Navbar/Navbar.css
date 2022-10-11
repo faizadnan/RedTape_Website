@@ -150,7 +150,7 @@ body {
 .featureddiv {
     /* border: 2px solid red; */
     padding: 0 30px;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     /* border: 2px solid green; */
 }
 
@@ -182,7 +182,7 @@ body {
     content: "";
     background-color: red;
     width: 100px;
-    height: 10px;
+    height: 5px;
     border-radius: 10px;
     position: absolute;
     right: 47%;
@@ -388,7 +388,7 @@ p {
 }
 
 .picdiv img {
-    width: 85%;
+    width: 99%;
     height: 100%;
 }
 
@@ -398,7 +398,7 @@ p {
 
 .abc {
     /* border: 2px solid green; */
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
 
 
 }
@@ -530,10 +530,14 @@ ul>button{
 
     }
 
+    .bigpicinnerdiv{
+        margin-top: 100px;
+    }
+
 
 
     .bpdiv1 p {
-        width: 200px;
+        width: 365px;
     }
 
 
@@ -561,7 +565,7 @@ ul>button{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 120px;
 
 }
 
@@ -613,5 +617,16 @@ ul>button{
         /* margin-left: 60px; */
         margin: 0px;
 
+    }
+    .bpdiv1 p {
+        width: 300px;
+    }
+
+    .bpdiv1 h2{
+        font-size: 25px;
+    }
+
+    .offercol>p{
+        width: 350px;
     }
 }
