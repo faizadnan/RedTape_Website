@@ -3,27 +3,16 @@ import './Cart.css'
 import { useState, useReducer } from 'react';
 // import  ReactDOM  from 'react-dom';
 const initialState = { count: 0 };
-function reducer(state, action) {
-    switch (action.type) {
-        case "INCREASE": return { count: state.count + 1 };
-        case "DECREASE": return { count: state.count + 1 }
-    }
-}
+
+   
+
 export default function Cart(props) {
     const [myitem, setmyitem] = useState(props.cartitem);
+    
 
-    const [state, dispatch] = useReducer(reducer, initialState)
-
+  
 
     let sum = 0;
-   
-    useEffect(() =>{
-        setmyitem(myitem)
-    },[props.cartitem])
-
-
-
-
     return (
         <>
             <div className='okay'>
@@ -64,6 +53,7 @@ export default function Cart(props) {
 
                                         </h6>
                                     </div>
+                                    
                                     <div className="cart_items_row3">
                                         <div>
                                             <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id) }}>Delete</span>
@@ -73,23 +63,10 @@ export default function Cart(props) {
                                         </div>
 
                                     </div>
-
-                                    <div className="cart_items_row4">
+                                    <span>Quantity:</span>
+                                    {/* <span className="cart_items_row4">
                                         <button >-</button> <input type="text" /> <button >+</button>
-                                    </div>
-
-
-                                    {/* <div className="cart_items_row4">
-                                        <button onClick={() =>{
-                                            dispatch({
-                                                type: "DECREASE",
-                                                state
-                                            })}
-                                        }>-</button> <input type="text" value={state.count} /> <button >+</button>
-                                    </div> */}
-
-
-
+                                    </span> */}
 
                                 </div>
                             </div>
