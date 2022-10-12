@@ -9,7 +9,7 @@ export default function Navbar(props) {
     // console.log(props.count)
     // console.log(props.cartitem)
 
- 
+    
     const [openModal, setopenModal] = useState(false)
     return (
         <>

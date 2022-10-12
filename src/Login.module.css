@@ -9,8 +9,7 @@
 }
 
 .container{
-    /* border: 1px solid red; */
-}
+    background: linear-gradient(to bottom, lightpink, white);}
 
 .col {
     flex-basis: 70%;
@@ -23,8 +22,8 @@
 
 }
 
-.account_page_div {
-   background: linear-gradient(to bottom, lightpink, white);
+.account_page_div{
+  
    margin-top: 50px;
     top: 58px;
     /* left: 50px; */
@@ -107,5 +106,9 @@
         box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem grey;
         
 
+    }
+
+    .row{
+        top: 114px;
     }
 }

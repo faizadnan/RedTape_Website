@@ -30,13 +30,10 @@ export default function App() {
     setcartitem([...cartitem]);
   }
 
-  const removeitem=(id)=>{
-    console.log("clicked delte")
-    console.log(id)
-    const newList = cartitem.filter((item) => item.id !== id);
-    console.log(newList)
-    setcartitem(newList);
+  const removeitem=(id)=>{    
+    setcartitem( cartitem.filter((item) => item.id !== id));
   }
+  
   return (
 
 

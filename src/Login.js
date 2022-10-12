@@ -8,10 +8,10 @@ export default function Login() {
         <>
 
 
-            <div class="account_page_div">
+            <div class={classes.account_page_div}>
                 <div class={classes.container}>
                     <div class={classes.row}>
-                        <div class="col">
+                        <div class={classes.col}>
                             <img src={image} width="100%" alt='Here is a image' />
                         </div>
 

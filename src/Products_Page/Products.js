@@ -48,7 +48,7 @@ export default function Products(props) {
                                 <i className="fa-solid fa-star"></i>
                                 <i className="fa-solid fa-star-half"></i>
                                 <p>${item.cost}</p>
-                                <button onClick={() =>props.onClick(item)}>Add To Cart </button>
+                                <button onClick={() =>props.onClick(item)}><i class="fa fa-plus" aria-hidden="true"></i> <i class="fa fa-shopping-cart" aria-hidden="true"></i> </button>
                             </div>
                         }
                         )

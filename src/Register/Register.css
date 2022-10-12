@@ -1,14 +1,21 @@
-
 .row {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    background-color: lightcoral;
+}
+
+.container{
+    /* border: 1px solid red; */
 }
 
 .col {
-    flex-basis: 50%;
-    max-width: 300px;
+    flex-basis: 70%;
+    max-width: 500px;
 }
 
 .col img {
@@ -18,20 +25,25 @@
 }
 
 .account_page_div {
-    background: linear-gradient(to bottom, lightpink, white);
-    height: 450px;
+   background: linear-gradient(to bottom, lightpink, white);
+   margin-top: 50px;
+    top: 58px;
+    /* left: 50px; */
+    width: 100%;
+    /* height: 450px;*/
+    /* border: 1px solid red; */
 
 }
-
 
 .form_container {
     /* border: 2px solid red; */
     width: 270px;
-    height: 350px;
+    height: 400px;
     background-color: white;
     padding: 20px 0;
     text-align: center;
     position: relative;
+    top: 70px;
     /* margin: 20px auto; */
     box-shadow: 1rem 1rem 1rem 0.5rem gray;
     /* margin-bottom: 20px; */
@@ -54,48 +66,51 @@
 
 }
 
-/* #login_form{
-    margin-top: 40px;
-} */
+.form_container form {
+    max-width: 300px;
 
-
-.form_container form{
-max-width: 300px;    
-position: absolute;
-top: 70px;
+    position: absolute;
+    top: 70px;
 }
 
-.login_form input{
-width: 80%;
-height: 30px;
-margin: 10px;
+.login_form input {
+    width: 80%;
+    height: 30px;
+    margin: 10px;
 
-/* border: 1ps solid #ccc; */
+    /* border: 1ps solid #ccc; */
 }
-.login_form button{
-    margin-top: 20px;
-width: 70%;
-background-color: orange;
-outline: black;
-height: 30px;
-border-radius: 20px ;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.login_form button {
+    width: 70%;
+    background-color: orange;
+    outline: black;
+    height: 30px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
-.login_form  a{
-text-decoration: none;
-color: gray;
+.login_form a {
+    text-decoration: none;
+    color: gray;
 }
+
+    
+  
+
 
 @media screen and (max-width: 600px) {
 
-.form_container {
+    .form_container {
 
-margin: 0;
-box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem grey;
+        margin: 0;
+        box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem grey;
+        
 
+    }
 
+    .row{
+        top: 114px;
+    }
 }
-}
-

@@ -63,6 +63,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     position: fixed;
+    z-index: 1000;
     top: 0%;
     width: 100%;
 
@@ -174,6 +175,21 @@ body {
 .imgbox  {
     /* border: 2px solid black; */
     width: 250px;
+    cursor: pointer;
+  
+    
+
+}
+
+.imgbox.featured_imgbox{
+    text-align: center;
+    transition: 0.5s;
+}
+
+.featured_imgbox:hover{
+    transform: translateY(-10px);
+    
+   
 }
 
 
@@ -201,6 +217,13 @@ p {
 .imgbox i {
     color: orange;
 }
+
+.fa-heart:hover{
+    /* background-color: red; */
+    color: red;
+    transform: scale(1.5);
+}
+
 
 /* .imgbox:hover {
     transform: translateY(-10px);
@@ -426,9 +449,9 @@ p {
     display: inline-block;
     text-decoration: none;
     color: white
-}
+} 
 
-.efg a:hover {
+ .efg a:hover {
     background-color: brown;
     transition: 0.2s;
 }

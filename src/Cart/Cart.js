@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Cart.css'
 import { useState, useReducer } from 'react';
 // import  ReactDOM  from 'react-dom';
@@ -16,8 +16,10 @@ export default function Cart(props) {
 
 
     let sum = 0;
-    // const [numberOfItems, setnumberOfItems] = useState(true)
-
+   
+    useEffect(() =>{
+        setmyitem(myitem)
+    },[props.cartitem])
 
 
 
