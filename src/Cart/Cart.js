@@ -4,6 +4,8 @@ import { useState, useReducer } from 'react';
 // import  ReactDOM  from 'react-dom';
 const initialState = { count: 0 };
 
+// let quantity= document.getElementById("quantity_input").value
+// console.log(quantity)
    
 
 export default function Cart(props) {
@@ -11,7 +13,7 @@ export default function Cart(props) {
     
 
   
-
+ 
     let sum = 0;
     return (
         <>
@@ -28,7 +30,7 @@ export default function Cart(props) {
 
 
                     <div className='cart_items_outer'>
-
+                        
                         {(myitem.length > 0) ? myitem.map(items => {
                             sum += parseInt(items.cost);
                             return <div className='cart_items' key={items.id}>
@@ -36,7 +38,7 @@ export default function Cart(props) {
                                 <div className='carts_info'>
                                     <div className='cart_items_title'>
                                         <h4>{items.title}</h4>
-                                        <h5>${items.cost}</h5>
+                                        <h5>${items.cost }</h5>
                                     </div>
 
                                     <div className='cart_items_row2'>
@@ -63,10 +65,8 @@ export default function Cart(props) {
                                         </div>
 
                                     </div>
-                                    <span>Quantity:</span>
-                                    {/* <span className="cart_items_row4">
-                                        <button >-</button> <input type="text" /> <button >+</button>
-                                    </span> */}
+                                    <span>Quantity: <input id="quantity_input" type="number" defaultValue="1" min="1" max="5" /></span>
+                        
 
                                 </div>
                             </div>

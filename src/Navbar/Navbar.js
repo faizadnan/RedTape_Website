@@ -1,28 +1,29 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 import logo from '../images/logo.png'
 // import image1 from '../images/image1.png'
 import { Link } from 'react-router-dom'
 import Cart from '../Cart/Cart'
-import  ReactDOM  from 'react-dom';
+import ReactDOM from 'react-dom';
 
 
 export default function Navbar(props) {
     // console.log(props.count)
     // console.log(props.cartitem)
-
-    
     const [openModal, setopenModal] = useState(false);
+  
+   
     useEffect(() => {
         document.addEventListener("scroll", () => {
-            console.log("scrolled")
-          let main1 = document.querySelector('.main1');
-          if (window.scrollY > 150) {
-            main1?.classList.add('scrolled');
-          } else {
-            main1?.classList.remove('scrolled');
-          }
-    })})
+
+            let main1 = document.querySelector('.main1');
+            if (window.scrollY > 150) {
+                main1?.classList.add('scrolled');
+            } else {
+                main1?.classList.remove('scrolled');
+            }
+        })
+    })
     return (
         <>
 
@@ -59,7 +60,7 @@ export default function Navbar(props) {
 
             </div>
 
-            {openModal && ReactDOM.createPortal(<Cart closeCart={setopenModal} cartitem={props.cartitem} removeitem={props.removeitem}></Cart>,document.getElementById("modal"))}
+            {openModal && ReactDOM.createPortal(<Cart closeCart={setopenModal} cartitem={props.cartitem} removeitem={props.removeitem}></Cart>, document.getElementById("modal"))}
 
 
 
