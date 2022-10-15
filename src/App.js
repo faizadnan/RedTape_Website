@@ -8,6 +8,7 @@ import Single_Product from './Single_Product_Page/Single_Product';
 import Register from './Register/Register';
 import { items } from './Data';
 import './App.css'
+import Footer from './Footer/Footer';
 
 const Context = React.createContext()
 export default function App() {
@@ -72,6 +73,7 @@ export default function App() {
 
 
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </Context.Provider>
 

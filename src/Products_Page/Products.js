@@ -65,8 +65,7 @@ export default function Products(props) {
                     <span><i className="fas fa-arrow-right" ></i></span>
                     
                 </div>
-            <Footer></Footer>
-
+          
         </>
     )
 }

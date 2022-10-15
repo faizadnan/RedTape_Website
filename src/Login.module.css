@@ -3,16 +3,20 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    position: absolute;
+    /* position: absolute; */
     top: 65px;
     width: 100%;
+    /* border: 2px solid red; */
+    margin-bottom: 19px;
+    padding: 20px
 }
 
-.container{
-    background: linear-gradient(to bottom, lightpink, white);}
+.container {
+    background: linear-gradient(to bottom, lightpink, white);
+}
 
 .col {
-    flex-basis: 70%;
+    /* flex-basis: 70%; */
     max-width: 500px;
 }
 
@@ -22,9 +26,9 @@
 
 }
 
-.account_page_div{
-  
-   margin-top: 50px;
+.account_page_div {
+    border: 3px solid red;
+    margin-top: 50px;
     top: 58px;
     /* left: 50px; */
     width: 100%;
@@ -36,11 +40,11 @@
 .form_container {
     /* border: 2px solid red; */
     width: 270px;
-    height: 400px;
+    height: 356px;
     background-color: white;
     padding: 20px 0;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     top: 70px;
     /* margin: 20px auto; */
     box-shadow: 1rem 1rem 1rem 0.5rem gray;
@@ -67,7 +71,7 @@
 .form_container form {
     max-width: 300px;
 
-    position: absolute;
+    /* position: absolute; */
     top: 70px;
 }
 
@@ -80,12 +84,13 @@
 }
 
 .login_form button {
-    width: 70%;
+    width: 50%;
     background-color: orange;
-    outline: black;
+
     height: 30px;
     border-radius: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    margin-bottom: 20px;
 
 }
 
@@ -94,8 +99,8 @@
     color: gray;
 }
 
-    
-  
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -104,11 +109,8 @@
 
         margin: 0;
         box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem grey;
-        
+
 
     }
 
-    .row{
-        top: 114px;
-    }
 }

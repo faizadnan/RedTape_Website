@@ -25,7 +25,7 @@ export default function Homepage(props) {
       <Featured></Featured>
       <Offer></Offer>
       <People></People>
-      <Footer></Footer>
+     
       {/* <Cart/> */}
 
     </>

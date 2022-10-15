@@ -49,7 +49,6 @@ export default function Single_Product(props) {
 
 
 
-            <Footer></Footer>
 
 
         </>
