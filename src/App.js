@@ -7,12 +7,20 @@ import Products from './Products_Page/Products';
 import Single_Product from './Single_Product_Page/Single_Product';
 import Register from './Register/Register';
 import { items } from './Data';
+import './App.css'
 
 const Context = React.createContext()
 export default function App() {
   const [count, setcount] = useState(0)
   const [modalOpen, setmodalOpen] = useState(false)
   const [cartitem, setcartitem] = useState([])
+  const [colorChange, setColorchange] = useState(false);
+
+  //function for changing color of navbar:-
+
+
+  //--------------------------------------
+
 
   function onAddtoCartHandler() {
     setcount(count + 1);
@@ -30,10 +38,23 @@ export default function App() {
     setcartitem([...cartitem]);
   }
 
-  const removeitem=(id)=>{    
-    setcartitem( cartitem.filter((item) => item.id !== id));
+  const removeitem = (id) => {
+    setcartitem(cartitem.filter((item) => item.id !== id));
   }
-  
+
+  //change color of navbar on scroll:-
+  window.addEventListener("scroll", function () {
+    const changeNavbarColor = () => {
+      console.log("scrolled")
+      if (window.scrollY >= 100) {
+        console.log("scrolling")
+        setColorchange(true);
+      }
+      else {
+        setColorchange(false);
+      }
+    };
+  })
   return (
 
 
@@ -41,7 +62,7 @@ export default function App() {
     <Context.Provider value={items}>
 
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Navbar count={count} cartitem={cartitem} removeitem={removeitem}></Navbar>
+        <Navbar className={colorChange ? 'main1 colorChange' : 'main1'} count={count} cartitem={cartitem} removeitem={removeitem}></Navbar>
         <Routes>
           <Route path='/Login' element={<Login />}></Route>
           <Route path='/Register' element={<Register />}></Route>

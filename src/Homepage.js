@@ -18,7 +18,7 @@ export default function Homepage(props) {
    
   return (
    
-    <div className='main'>
+   <>
       {/* <Navbar count={props.count} openCart={props.openCart} ></Navbar> */}
       <Bigpicture></Bigpicture>
       <Exclusive></Exclusive>
@@ -27,8 +27,8 @@ export default function Homepage(props) {
       <People></People>
       <Footer></Footer>
       {/* <Cart/> */}
-    </div>
-  
+
+    </>
   )
   console.log(props.count)
 }

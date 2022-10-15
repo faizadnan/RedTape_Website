@@ -49,24 +49,30 @@ body {
 
 
 .main {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     box-sizing: border-box;
 
 }
 
 .main1 {
-    background-color: lightpink;
+    background-color: lightpink !important;
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     flex-wrap: wrap;
-    position: fixed;
+    position: sticky;
+  
     z-index: 1000;
     top: 0%;
     width: 100%;
+    height: 55px;
 
+}
+
+.main1.scrolled{
+    background: linear-gradient(to bottom, lightpink , white) !important;
 }
 
 .row1 {
@@ -407,6 +413,8 @@ p {
     justify-content: center;
     padding: 50px;
     background: linear-gradient(to bottom, lightpink, white);
+    /* border: 2px solid red; */
+    /* margin-top: 55px; */
 
 }
 

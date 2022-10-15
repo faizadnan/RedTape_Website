@@ -5,12 +5,24 @@ import logo from '../images/logo.png'
 import { Link } from 'react-router-dom'
 import Cart from '../Cart/Cart'
 import  ReactDOM  from 'react-dom';
+
+
 export default function Navbar(props) {
     // console.log(props.count)
     // console.log(props.cartitem)
 
     
-    const [openModal, setopenModal] = useState(false)
+    const [openModal, setopenModal] = useState(false);
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            console.log("scrolled")
+          let main1 = document.querySelector('.main1');
+          if (window.scrollY > 150) {
+            main1?.classList.add('scrolled');
+          } else {
+            main1?.classList.remove('scrolled');
+          }
+    })})
     return (
         <>
 
