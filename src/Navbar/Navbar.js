@@ -5,12 +5,14 @@ import logo from '../images/logo.png'
 import { Link } from 'react-router-dom'
 import Cart from '../Cart/Cart'
 import ReactDOM from 'react-dom';
+import Wishlist from '../WishList/Wishlist'
 
 
 export default function Navbar(props) {
     // console.log(props.count)
     // console.log(props.cartitem)
     const [openModal, setopenModal] = useState(false);
+    const [openWishlist, setopenWishlist] = useState(false);
   
    
     useEffect(() => {
@@ -41,6 +43,10 @@ export default function Navbar(props) {
 
 
                         <Link to="/Products"> <li>Products</li></Link>
+                        <button onClick={() => {
+                            console.log("clcikc");
+                            setopenWishlist(true)
+                        }} ><i class="fa fa-heart" aria-hidden="true"></i> WishList</button>
 
 
 
@@ -49,7 +55,7 @@ export default function Navbar(props) {
                         <button onClick={() => {
                             console.log("clcikc");
                             setopenModal(true)
-                        }}><i className="fa fa-shopping-cart" aria-hidden="true"></i> <span className='cart_badge'>{props.cartitem.length}</span></button>
+                        }}><i className="fa fa-shopping-cart" aria-hidden="true"></i> Cart  <span className='cart_badge'>{props.cartitem.length}</span></button>
                     </ul>
 
 
@@ -61,6 +67,9 @@ export default function Navbar(props) {
             </div>
 
             {openModal && ReactDOM.createPortal(<Cart closeCart={setopenModal} cartitem={props.cartitem} removeitem={props.removeitem}></Cart>, document.getElementById("modal"))}
+
+
+           {openWishlist && <Wishlist  closeWishlist={setopenWishlist} wishitem={props.wishitem} removeitem={props.removeitem}></Wishlist>} 
 
 
 
