@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Bree Serif', serif;
+
 }
 
 .wraper {
@@ -132,6 +133,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;   
+  
 }
 
 .innerexclusivediv img {
@@ -379,12 +381,28 @@ p {
     background: linear-gradient(to bottom, lightpink, white);
     /* border: 2px solid red; */
     /* margin-top: 55px; */
+    
+    
 
+}
+
+@keyframes lazyLoading {
+    to{
+        opacity: 1;
+        /* transform: translateX(); */
+
+    }
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
 }
 
 .picdiv img {
     width: 99%;
     height: 100%;
+    animation-name: lazyLoading;
+    animation-duration: 3s;
 }
 
 .bpdiv1 {
@@ -392,6 +410,9 @@ p {
     flex-direction: column;
     justify-content: center;
     /* margin-left: 80px; */
+    /* border: 1px solid red; */
+    animation-name: lazyLoading;
+    animation-duration: 3s;
 }
 
 .bpdiv1 p {

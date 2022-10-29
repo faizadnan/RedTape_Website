@@ -6,13 +6,15 @@ const initialState = { count: 0 };
 
 // let quantity= document.getElementById("quantity_input").value
 // console.log(quantity)
-   
+
 
 export default function Cart(props) {
+   
     const [myitem, setmyitem] = useState(props.cartitem);
     
-
-  
+   
+    // console.log(obj1)
+    // console.log(props.cartitem)
  
     let sum = 0;
     return (
@@ -58,7 +60,7 @@ export default function Cart(props) {
                                     
                                     <div className="cart_items_row3">
                                         <div>
-                                            <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id) }}>Delete</span>
+                                            <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id); setmyitem(props.cartitem); }}>Delete</span>
                                         </div>
                                         <span>|</span>
                                         <div>  <i class="fa fa-heart" aria-hidden="true"></i> <span>Save</span>
