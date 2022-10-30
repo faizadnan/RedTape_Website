@@ -46,7 +46,7 @@ export default function Navbar(props) {
                         <button onClick={() => {
                             console.log("clcikc");
                             setopenWishlist(true)
-                        }} ><i class="fa fa-heart" aria-hidden="true"></i> WishList</button>
+                        }} ><i class="fa fa-heart" aria-hidden="true"></i>List  <span className='cart_badge'>{props.wishitem.length}</span></button>
 
 
 
