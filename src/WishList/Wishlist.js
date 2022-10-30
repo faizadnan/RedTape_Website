@@ -60,12 +60,13 @@ export default function WishList(props) {
                                     
                                     <div className="cart_items_row3">
                                         <div>
-                                            <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removeitem(items.id); setmywishitem(props.cartitem); }}>Delete</span>
+                                            <i class="fa fa-trash-o" aria-hidden="true" ></i> <span onClick={() => { props.removefromWishList(items.id); setmywishitem(props.wishitem) }}>Remove from Wishlist</span>
                                             
                                             
                                         </div>
                                         <span>|</span>
-                                        <button>Move to Cart</button>
+
+                                        <button id='addtoCart' ><i class="fa fa-plus" aria-hidden="true"></i> <i class="fa fa-shopping-cart" aria-hidden="true"></i> </button> 
 
                                     </div>
                                     <span>Quantity: <input id="quantity_input" type="number" defaultValue="1" min="1" max="5" /></span>

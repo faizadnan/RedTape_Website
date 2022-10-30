@@ -30,8 +30,23 @@ export default function App() {
       return [];
     }
   });
-  const [wishitem, setwishitem]= useState([])
+  const [wishitem, setwishitem]= useState(() => {
+    // get the todos from localstorage
+    const savedWishItems = localStorage.getItem("wishlistitem");
+    // if there are todos stored)
+    if (savedWishItems) {
+      // return the parsed the JSON object back to a javascript object
+      return JSON.parse(savedWishItems);
+      // otherwise
+    } else {
+      // return an empty array
+      return [];
+    }
+  })
+
+  //setting items to local storage!!!!
   localStorage.setItem("cartitem", JSON.stringify(cartitem) )
+  localStorage.setItem("wishlistitem", JSON.stringify(wishitem) )
  
   function onAddtoCartHandler() {
     setcount(count + 1);
@@ -42,8 +57,6 @@ export default function App() {
     cartitem.push(item);
     console.log(cartitem);
     setcartitem([...cartitem]);
-  
-    // setcartitem(localStorage.getItem(JSON.parse("cartitem")))
   }
 
 
@@ -52,12 +65,18 @@ export default function App() {
   }
 
   //-------------------------Wishlist:-
+  //adding item to wishList
   const addtoWishlist = (item) => {
     wishitem.push(item);
     console.log(wishitem);
-    setwishitem([...wishitem]);
-  
-    // setcartitem(localStorage.getItem(JSON.parse("cartitem")))
+    setwishitem([...wishitem]);   
+   
+  }
+  //removing item form WishList:-
+  const removefromWishList = (id) => {
+    console.log(id)
+    setwishitem(wishitem.filter((item) => item.id !== id));
+    console.log(wishitem);
   }
 
 
@@ -69,7 +88,8 @@ export default function App() {
     <Context.Provider value={items}>
 
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Navbar count={count} cartitem={cartitem} removeitem={removeitem} wishitem={wishitem}></Navbar>
+        <Navbar count={count} cartitem={cartitem} removeitem={removeitem} wishitem={wishitem} removefromWishList={removefromWishList}></Navbar>
+
         <Routes>
           <Route path='/Login' element={<Login />}></Route>
           <Route path='/Register' element={<Register />}></Route>

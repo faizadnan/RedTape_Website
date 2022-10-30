@@ -1,12 +1,18 @@
 .imgbox>button{
-    background-color: lightpink;
-    border: 1px solid palevioletred;
-    border-radius: 6px;
+    background-color: rgb(240, 195, 202);
     padding: 0 5px;
+    border: none;
+    /* border: 1px solid palevioletred; */
+     /* border-radius: 6px; */
 }
-
+#saveforLater{   
+    border-radius: 50px 0px 0px 50px;
+}
+#addtoCart{
+    border-radius: 0px 50px 50px 0px;
+}
 .imgbox>button:hover{
-    background-color: rgb(185, 60, 60);
+    background-color: rgb(231, 137, 137);
 }
 
 h4{
