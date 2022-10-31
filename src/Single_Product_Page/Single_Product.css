@@ -44,13 +44,13 @@
     height: 32px
 }
 
-.single_product_div1 input {
+.single_product_div1>input {
     width: 40px;
     height: 32px;
     border-color: lightcoral;
 }
 
-.single_product_div1 button {
+.single_product_div1>button {
     /* width: 100px; */
     border-radius: 50px;
     margin-top: 10px;
@@ -63,6 +63,42 @@
 .single_product_div1 button:hover{
     background-color: pink;
 } 
+
+#delivery_div{
+    margin-top: 20px;
+}
+#delivery_div>input{
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid black;
+ 
+}
+
+#delivery_div>input:focus{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+#pinCheckButton,#Change{
+    
+    outline: none;
+    /* border: 1px solid black; */
+    border-radius: 3px;
+    border: none;
+    width: 70px;
+    color: rgb(247, 113, 113);
+    background-color: white;
+   
+
+}
+#Change {
+    display: none;
+}
+
+#deliveryResult{
+    font-style: italic;
+}
 
 
 @media screen and (max-width:450px) {
@@ -98,5 +134,4 @@
       
     }
 
- 
 }

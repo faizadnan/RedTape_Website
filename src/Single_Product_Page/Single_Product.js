@@ -1,16 +1,49 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useRef } from 'react'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import './Single_Product.css'
 import image8 from '../images/product-8.jpg'
 import { Context } from '../App'
+import {Pincode} from './Pincode'
 
+console.log(Pincode)
 export default function Single_Product(props) {
     console.log(props)
     // console.log(props.items[0].src)
 
 
     const item = useContext(Context)
+    const inputRef =useRef();
+
+//function to check pinvalidity:-
+let delivery_div=  document.getElementById("deliveryResult");
+let Change = document.getElementById("Change");
+let pincheckbutton =document.getElementById("pinCheckButton")
+    function checkPin(){       
+        Change.style.display = "inline";
+        pincheckbutton.style.display = "none";
+
+        if (inputRef.current.value.length > 0) {
+
+            for (let i = 0; i < Pincode.length; i++) {
+                if (inputRef.current.value == Pincode[i]) {
+                    delivery_div.innerText = ("Delivery by Monday");
+                    break;
+                } else {
+                    delivery_div.innerText = ("Invalid PinCode");
+                }
+            }
+        }
+      
+    }
+
+
+    //fucntion to ficus the input on clciking the change button:-
+        function changeFocus() {   
+        inputRef.current.focus()
+        Change.style.display = "none";
+        pincheckbutton.style.display = "block"
+    }
 
 
     return (
@@ -59,6 +92,17 @@ export default function Single_Product(props) {
                     <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, debitis? <br />
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio libero odit non, consequuntur optio
                         consequatur voluptate labore ut ipsa impedit ratione illo.</p>
+
+                    <div id='delivery_div'>
+
+                    <input type="text" placeholder='Check Delivery Pincode' id='input' ref={inputRef}/>
+                    <button onClick={checkPin} id="pinCheckButton">Check</button>
+                    <button id="Change" onClick={changeFocus}>Change</button>
+
+                    </div>
+
+                    <div id="deliveryResult"></div>
+                                
                 </div>
             </div>
 
@@ -69,3 +113,4 @@ export default function Single_Product(props) {
         </>
     )
 }
+
