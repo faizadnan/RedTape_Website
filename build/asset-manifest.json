@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RedTape_Website/static/css/main.9cdd40b4.css",
-    "main.js": "/RedTape_Website/static/js/main.3fc66687.js",
+    "main.js": "/RedTape_Website/static/js/main.d78d6d8a.js",
     "static/media/image1.png": "/RedTape_Website/static/media/image1.5803117a0b8ba1cb6446.png",
     "static/media/product-5.jpg": "/RedTape_Website/static/media/product-5.afcb7f8f871094c3cd9c.jpg",
     "static/media/category-1.jpg": "/RedTape_Website/static/media/category-1.fc0e3aa3780d85f56082.jpg",
@@ -25,10 +25,10 @@
     "static/media/logo-godrej.png": "/RedTape_Website/static/media/logo-godrej.671beead879441c5b8f3.png",
     "index.html": "/RedTape_Website/index.html",
     "main.9cdd40b4.css.map": "/RedTape_Website/static/css/main.9cdd40b4.css.map",
-    "main.3fc66687.js.map": "/RedTape_Website/static/js/main.3fc66687.js.map"
+    "main.d78d6d8a.js.map": "/RedTape_Website/static/js/main.d78d6d8a.js.map"
   },
   "entrypoints": [
     "static/css/main.9cdd40b4.css",
-    "static/js/main.3fc66687.js"
+    "static/js/main.d78d6d8a.js"
   ]
 }
