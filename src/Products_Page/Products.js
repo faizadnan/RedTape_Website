@@ -4,6 +4,7 @@ import { useState,useContext,useEffect } from 'react'
 import Footer from '../Footer/Footer'
 import { Context } from '../App'
 import './Products.css'
+import { Link } from 'react-router-dom'
 
 export default function Products(props) {
 
@@ -34,13 +35,16 @@ export default function Products(props) {
             </div>
 
             <div className="featureddiv">
-
-                <div className="innerfeatureddiv">
+           
+                <div className="innerfeatureddiv"  >
+               
                     {
 
                         item.map((item) => {
-                            return <div className="imgbox" key={item.id}>
+                            return <div className="imgbox" key={item.id} onClick={()=> props.openProduct(item)}>
+                            <Link to='/SingleProduct'  >
                                 <img src={item.src} alt="" />
+                                </Link>
                                 <h4>{item.title}</h4>
 
                                 <button id='saveforLater'  onClick={() =>{props.onClickWish(item);
@@ -66,6 +70,7 @@ export default function Products(props) {
                         )
                     }
                 </div>
+            
 
 
             </div>

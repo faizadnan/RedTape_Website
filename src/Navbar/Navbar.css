@@ -473,7 +473,9 @@ ul>button {
         flex-wrap: wrap;
     }
 
-
+    .main1.scrolled {
+        background: linear-gradient(to bottom, lightpink, white) !important;
+    }
 
 
 
@@ -502,7 +504,6 @@ ul>button {
 
 
 
-
 }
 
 @media screen and (max-width: 900px) {
@@ -510,7 +511,7 @@ ul>button {
     .main1 {
         justify-content: center;
     }
-
+  
 }
 
 @media screen and (max-width: 700px) {
@@ -524,7 +525,7 @@ ul>button {
 }
 
 @media screen and (max-width: 600px) {
-
+  
     .row1_col2 ul {
         list-style: none;
         display: flex;

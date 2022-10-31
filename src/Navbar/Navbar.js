@@ -19,10 +19,12 @@ export default function Navbar(props) {
         document.addEventListener("scroll", () => {
 
             let main1 = document.querySelector('.main1');
-            if (window.scrollY > 150) {
+            if (window.scrollY > 200) {
                 main1?.classList.add('scrolled');
+              
             } else {
                 main1?.classList.remove('scrolled');
+               
             }
         })
     })
