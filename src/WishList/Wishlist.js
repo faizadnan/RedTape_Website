@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import '../Cart/Cart.css'
+import './WishList.css'
+
 import { useState, useReducer } from 'react';
 // import  ReactDOM  from 'react-dom';
 const initialState = { count: 0 };
@@ -66,7 +68,8 @@ export default function WishList(props) {
                                         </div>
                                         <span>|</span>
 
-                                        <button id='addtoCart' ><i class="fa fa-plus" aria-hidden="true"></i> <i class="fa fa-shopping-cart" aria-hidden="true"></i> </button> 
+                                        <button id='addtoCart' ><i class="fa fa-plus" onClick={()=> props.onClick(items)}></i> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                         </button> 
 
                                     </div>
                                     <span>Quantity: <input id="quantity_input" type="number" defaultValue="1" min="1" max="5" /></span>
@@ -91,9 +94,7 @@ export default function WishList(props) {
                         <button onClick={() => {
                             props.closeWishlist(false)
                         }}>Close </button>
-                        {/* <button onClick={() => {
-                            alert("Your Order has been placed")
-                        }}>Order</button> */}
+                       
                     </div>
                 </div>
 

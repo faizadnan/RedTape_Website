@@ -69,7 +69,7 @@ export default function Navbar(props) {
             {openModal && ReactDOM.createPortal(<Cart closeCart={setopenModal} cartitem={props.cartitem} removeitem={props.removeitem}></Cart>, document.getElementById("modal"))}
 
 
-           {openWishlist && <Wishlist  closeWishlist={setopenWishlist} wishitem={props.wishitem} removefromWishList={props.removefromWishList}></Wishlist>} 
+           {openWishlist && <Wishlist  closeWishlist={setopenWishlist} wishitem={props.wishitem} removefromWishList={props.removefromWishList} onClick={props.onClick}></Wishlist>} 
 
 
 

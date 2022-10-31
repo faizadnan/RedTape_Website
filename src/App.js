@@ -93,7 +93,7 @@ function openProduct(item){
     <Context.Provider value={items}>
 
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Navbar count={count} cartitem={cartitem} removeitem={removeitem} wishitem={wishitem} removefromWishList={removefromWishList}></Navbar>
+        <Navbar count={count} cartitem={cartitem} removeitem={removeitem} wishitem={wishitem} removefromWishList={removefromWishList} onClick={addtoCart}></Navbar>
 
         <Routes>
           <Route path='/Login' element={<Login />}></Route>
