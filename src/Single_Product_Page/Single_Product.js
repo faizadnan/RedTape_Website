@@ -17,20 +17,19 @@ export default function Single_Product(props) {
 
 //function to check pinvalidity:-
 let delivery_div=  document.getElementById("deliveryResult");
-let Change = document.getElementById("Change");
-let pincheckbutton =document.getElementById("pinCheckButton")
+
     function checkPin(){       
-        Change.style.display = "block";
-        pincheckbutton.style.display = "none";
+        document.getElementById("Change").style.display = "block";
+        document.getElementById("pinCheckButton").style.display = "none";
 
         if (inputRef.current.value.length > 0) {
 
             for (let i = 0; i < Pincode.length; i++) {
                 if (inputRef.current.value == Pincode[i]) {
-                    delivery_div.innerText = ("Delivery by Monday");
+                    document.getElementById("deliveryResult").innerText = ("Delivery by Monday");
                     break;
                 } else {
-                    delivery_div.innerText = ("Invalid PinCode");
+                    document.getElementById("deliveryResult").innerText = ("Invalid PinCode");
                 }
             }
         }
@@ -41,8 +40,8 @@ let pincheckbutton =document.getElementById("pinCheckButton")
     //fucntion to ficus the input on clciking the change button:-
         function changeFocus() {   
         inputRef.current.focus()
-        Change.style.display = "none";
-        pincheckbutton.style.display = "block"
+        document.getElementById("Change").style.display = "none";
+        document.getElementById("pinCheckButton").style.display = "block"
     }
 
 
