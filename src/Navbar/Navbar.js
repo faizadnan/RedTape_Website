@@ -13,7 +13,8 @@ export default function Navbar(props) {
     // console.log(props.cartitem)
     const [openModal, setopenModal] = useState(false);
     const [openWishlist, setopenWishlist] = useState(false);
-  
+    const [wishbumpeffect,setwishbumpeffect] = useState(false);
+    const [cartbumpeffect,setcartbumpeffect] = useState(false);
    
     useEffect(() => {
         document.addEventListener("scroll", () => {
@@ -28,6 +29,38 @@ export default function Navbar(props) {
             }
         })
     })
+    //giving a bumping effect to wiah button:-
+
+    let wishItemLength =props.wishitem.length
+    useEffect(() => {
+       document.getElementById("wishlistButton").classList.add("bump")
+       setwishbumpeffect(true);     
+      let timer = setTimeout(() => {
+        document.getElementById("wishlistButton").classList.remove("bump");
+        setwishbumpeffect(false)
+       }, 1000);
+      return () => {
+       clearTimeout(timer)
+      }
+    console.log(props.wishitem.length)
+    }, [wishItemLength])
+
+    //giving a bump effect to cart:-
+    let cartItemLength =props.cartitem.length;
+    useEffect(() => {
+       document.getElementById("cartButton").classList.add("bump")
+       setcartbumpeffect(true);    
+        
+      let timer = setTimeout(() => {
+        document.getElementById("cartButton").classList.remove("bump");
+        setcartbumpeffect(false)
+       }, 1000);
+      return () => {
+       clearTimeout(timer)
+      }
+   
+    }, [cartItemLength])
+    
     return (
         <>
 
@@ -45,8 +78,9 @@ export default function Navbar(props) {
 
 
                         <Link to="/Products"> <li>Products</li></Link>
-                        <button onClick={() => {
-                            console.log("clcikc");
+                      
+                        <button id='wishlistButton'  onClick={() => {
+                            console.log("clcikc");                           
                             setopenWishlist(true)
                         }} ><i class="fa fa-heart" aria-hidden="true"></i>List  <span className='cart_badge'>{props.wishitem.length}</span></button>
 
@@ -54,7 +88,7 @@ export default function Navbar(props) {
 
                         <Link to="/Login" ><li>Login</li></Link>
 
-                        <button onClick={() => {
+                        <button id='cartButton'  onClick={() => {
                             console.log("clcikc");
                             setopenModal(true)
                         }}><i className="fa fa-shopping-cart" aria-hidden="true"></i> Cart  <span className='cart_badge'>{props.cartitem.length}</span></button>
