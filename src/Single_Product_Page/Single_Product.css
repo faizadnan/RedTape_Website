@@ -3,7 +3,7 @@
     /* border: 2px solid red; */
     box-sizing: border-box;
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     /* justify-content: space-around; */
     /* gap: 3%; */
 }
@@ -64,3 +64,41 @@
     background-color: pink;
 } 
 
+
+@media screen and (max-width:450px) {
+    .single_product_main_div {
+        /* border: 2px solid red; */
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 100px;
+        /* justify-content: space-around; */
+        /* gap: 3%; */
+    }
+
+
+    .single_product_main_div{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .single_product_div1 {
+        width: 100%;
+        text-align:left;
+        padding: 10px
+        
+    }
+    .single_product_div1 img{
+        width: 100%;
+    }
+
+    .fgh {
+        display: flex;     
+        gap: 10px;
+        justify-content: center;
+      
+    }
+
+    .single_product_div1 p{
+        width: 300px;
+    }
+}

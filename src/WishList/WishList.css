@@ -1,5 +1,6 @@
-#addtoCart{
+#toCart{
     background-color: lightcoral;
     border:  1px solid rgb(175, 41, 41);
+    border-radius: 2px;
     
 }

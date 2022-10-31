@@ -31,7 +31,7 @@ export default function Single_Product(props) {
                 <div className="single_product_div1">
                     {/* <p>{props.productsource.title}</p> */}
                     <h1>{props.productsource.title}</h1>
-                    <h4>{props.productsource.cost}</h4>
+                    <h4>${props.productsource.cost}</h4>
                     <div>
                     <select name="" id="">
                         <option value="">Select Size</option>
