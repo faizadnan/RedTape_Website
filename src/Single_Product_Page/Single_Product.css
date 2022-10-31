@@ -103,12 +103,10 @@
 
 @media screen and (max-width:450px) {
     .single_product_main_div {
-        /* border: 2px solid red; */
         box-sizing: border-box;
         display: flex;
         margin-top: 100px;
-        /* justify-content: space-around; */
-        /* gap: 3%; */
+      
     }
 
 
@@ -120,7 +118,8 @@
     .single_product_div1 {
         width: 100%;
         text-align:left;
-        padding: 10px
+        padding: 10px;
+        margin-bottom: 20p
         
     }
     .single_product_div1 img{
