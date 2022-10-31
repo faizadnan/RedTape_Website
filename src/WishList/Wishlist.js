@@ -68,7 +68,7 @@ export default function WishList(props) {
                                         </div>
                                         <span>|</span>
 
-                                        <button id='toCart' ><i class="fa fa-plus" onClick={()=> props.onClick(items)}></i> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button id='toCart' onClick={()=> props.onClick(items)}><i class="fa fa-plus" ></i> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                          </button> 
 
                                     </div>
