@@ -79,7 +79,12 @@ export default function App() {
     console.log(wishitem);
   }
 
+  const [imgsource,setimgsource]= useState()
+function openProduct(item){
+  console.log(item);
+  setimgsource(item)
 
+}
 
   return (
 
@@ -93,10 +98,10 @@ export default function App() {
         <Routes>
           <Route path='/Login' element={<Login />}></Route>
           <Route path='/Register' element={<Register />}></Route>
-          <Route path='/' element={<Homepage count={count} />} />
+          <Route path='/' element={<Homepage count={count} openProduct={openProduct}/>} />
           <Route path='/Products' element={<Products onClick={addtoCart} onClickWish={addtoWishlist}/>} />
       
-          <Route path='/SingleProduct' element={<Single_Product items={items} onClick={onAddtoCartHandler} count={count} />} />
+          <Route path='/SingleProduct' element={<Single_Product items={items} count={count} productsource={imgsource} onClickWish={addtoWishlist} onClick={addtoCart}/> } />
 
 
         </Routes>

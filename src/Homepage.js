@@ -22,7 +22,7 @@ export default function Homepage(props) {
       {/* <Navbar count={props.count} openCart={props.openCart} ></Navbar> */}
       <Bigpicture></Bigpicture>
       <Exclusive></Exclusive>
-      <Featured></Featured>
+      <Featured openProduct={props.openProduct}></Featured>
       <Offer></Offer>
       <People></People>
      

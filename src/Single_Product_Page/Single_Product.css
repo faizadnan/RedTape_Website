@@ -15,6 +15,10 @@
 
 
 }
+.single_product_div1>div{
+    display: flex;
+    gap: 10px;
+}
 
 .fgh {
     display: flex;
@@ -35,20 +39,28 @@
 }
 
 .single_product_div1 select {
-    border-color: orange;
+    border-color: lightcoral;
     outline: none;
+    height: 32px
 }
 
 .single_product_div1 input {
     width: 40px;
-    border-color: orange;
+    height: 32px;
+    border-color: lightcoral;
 }
 
 .single_product_div1 button {
-    width: 100px;
+    /* width: 100px; */
     border-radius: 50px;
-    background-color: orange;
+    margin-top: 10px;
+    background-color: lightcoral;
+    border: 1px solid red;
     /* font-weight: bold; */
-    color: white;
+    color: black;
 }
+
+.single_product_div1 button:hover{
+    background-color: pink;
+} 
 

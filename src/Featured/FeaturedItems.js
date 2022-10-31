@@ -13,7 +13,7 @@ export default function FeaturedItems(props) {
     const abc = useContext(Context)
     const [item, setitem] = useState(abc);
 
-    console.log(item.length)
+    console.log(item)
 
     return (
         <>
@@ -54,8 +54,8 @@ export default function FeaturedItems(props) {
                         
                       item.slice(4,12).map((item) => {
                         
-                            return <div className="imgbox" key={item.id}>
-                                <Link to='/SingleProduct' >  <img src={item.src} alt="" /></Link>
+                            return <div className="imgbox" key={item.id} onClick={()=> props.openProduct(item)}>
+                                <Link to='/SingleProduct' imgsource ={item.src} >  <img src={item.src} alt="" /></Link>
                                 <h4>{item.title}</h4>
                                 <div>
                                 <i className="fa-solid fa-star"></i>
