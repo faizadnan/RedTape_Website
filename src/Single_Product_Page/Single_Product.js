@@ -56,7 +56,7 @@ export default function Single_Product(props) {
 
                     <h3>Product Details </h3>
 
-                    <p style={{ width: "500px" }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, debitis? <br />
+                    <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, debitis? <br />
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio libero odit non, consequuntur optio
                         consequatur voluptate labore ut ipsa impedit ratione illo.</p>
                 </div>
