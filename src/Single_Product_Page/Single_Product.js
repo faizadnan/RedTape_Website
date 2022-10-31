@@ -20,7 +20,7 @@ let delivery_div=  document.getElementById("deliveryResult");
 let Change = document.getElementById("Change");
 let pincheckbutton =document.getElementById("pinCheckButton")
     function checkPin(){       
-        Change.style.display = "inline";
+        Change.style.display = "block";
         pincheckbutton.style.display = "none";
 
         if (inputRef.current.value.length > 0) {
