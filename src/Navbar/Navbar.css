@@ -616,7 +616,7 @@ ul>button {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .row1_col2 ul li {
         /* margin-left: 60px; */
         margin: 0px;
@@ -636,7 +636,12 @@ ul>button {
     }
 
     .row1_col2 ul {
-        gap: 10px;
+ 
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        
     }
 
     .row1_col2 ul>button {
